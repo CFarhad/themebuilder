@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+
+.themebuilder_controller {
+    margin-bottom: 15px;
+}
+
+.themebuilder_label {
+  @apply themebuilder_block themebuilder_mb-0.5 themebuilder_text-xs themebuilder_font-medium themebuilder_text-gray-900;
+}
+
+.themebuilder_label-checkbox {
+  @apply themebuilder_mb-2 themebuilder_text-xs themebuilder_font-medium themebuilder_text-gray-900 themebuilder_inline-block;
+}
+
+.themebuilder_btn {
+  @apply themebuilder_font-medium themebuilder_rounded-md themebuilder_text-xs themebuilder_px-3 themebuilder_py-2 themebuilder_me-2 themebuilder_mb-2;
+}
+
+.themebuilder_btn-default {
+  @apply themebuilder_btn themebuilder_text-white  themebuilder_bg-blue-500 hover:themebuilder_bg-blue-600;
+}
+
+.themebuilder_btn-success {
+  @apply themebuilder_btn themebuilder_text-white themebuilder_bg-green-500 hover:themebuilder_bg-green-600;
+}
+
+.themebuilder_btn-danger {
+  @apply themebuilder_btn themebuilder_text-white themebuilder_bg-red-500 hover:themebuilder_bg-red-600;
+}
+
+.themebuilder_input {
+  @apply themebuilder_bg-gray-50 themebuilder_border themebuilder_border-gray-300 themebuilder_text-gray-900 themebuilder_text-xs themebuilder_rounded focus:themebuilder_ring-slate-700 focus:themebuilder_border-slate-700 themebuilder_block themebuilder_w-full themebuilder_p-2;
+}
+
+.themebuilder_textarea {
+  @apply themebuilder_bg-gray-50 themebuilder_border themebuilder_border-gray-300 themebuilder_text-gray-900 themebuilder_text-sm themebuilder_rounded focus:themebuilder_ring-slate-700 focus:themebuilder_border-slate-700 themebuilder_block themebuilder_w-full themebuilder_p-2 themebuilder_min-h-20;
+}
+
+.themebuilder_select {
+  @apply themebuilder_bg-gray-50 themebuilder_border themebuilder_border-gray-300 themebuilder_text-gray-900 themebuilder_text-sm themebuilder_rounded focus:themebuilder_ring-slate-700 focus:themebuilder_border-slate-700 themebuilder_block themebuilder_w-full themebuilder_p-2;
+}
+
+.themebuilder_radio {
+  @apply themebuilder_w-4 themebuilder_h-4 themebuilder_ml-2 themebuilder_text-slate-700 themebuilder_bg-gray-100 themebuilder_border-gray-300 focus:themebuilder_ring-slate-700;
+}
+
+.themebuilder_alert {
+  @apply themebuilder_p-2 themebuilder_mb-4 themebuilder_text-xs themebuilder_rounded themebuilder_text-amber-800 themebuilder_bg-amber-50 themebuilder_border themebuilder_border-amber-300;
+}
+
+/* TAB */
+/* Tab Container */
+.themebuilder_tab-container {
+  @apply themebuilder_mb-4;
+}
+
+/* Tab List */
+.themebuilder_tab-list {
+  @apply themebuilder_flex themebuilder_flex-wrap themebuilder_-mb-px themebuilder_text-sm themebuilder_font-medium themebuilder_text-center;
+}
+
+/* Tab Item */
+.themebuilder_tab-item {
+  @apply themebuilder_me-2;
+}
+
+/* Tab Button */
+.themebuilder_tab-button {
+  @apply themebuilder_inline-block themebuilder_px-3 themebuilder_py-2 themebuilder_rounded themebuilder_font-medium themebuilder_text-center themebuilder_transition-colors themebuilder_duration-200;
+}
+
+/* Tab Active Classes */
+.themebuilder_tab-active {
+  @apply themebuilder_text-white themebuilder_bg-slate-700;
+}
+
+/* Tab Inactive Classes */
+.themebuilder_tab-inactive {
+  @apply themebuilder_text-slate-500 themebuilder_bg-white themebuilder_border-transparent hover:themebuilder_bg-slate-300;
+}
+
+/* Tab Panel */
+.themebuilder_tab-panel.hidden {
+  display: none;
+  @apply themebuilder_p-4 themebuilder_rounded themebuilder_bg-slate-50 dark:themebuilder_bg-slate-800;
+}
+
+/* Tab Panel Content */
+.themebuilder_tab-panel-content {
+  @apply themebuilder_text-sm themebuilder_text-slate-500 dark:themebuilder_text-slate-400;
+}
+
+/* Tab Panel Strong */
+.themebuilder_tab-panel-strong {
+  @apply themebuilder_font-medium themebuilder_text-slate-800 dark:themebuilder_text-white;
+}
+
+/* Drawer Container */
+.themebuilder_drawer {
+  @apply themebuilder_fixed themebuilder_top-0 ltr:themebuilder_left-0 rtl:themebuilder_right-0 themebuilder_z-40 themebuilder_h-screen themebuilder_p-4 themebuilder_overflow-y-auto
+     themebuilder_transition-transform themebuilder_bg-white themebuilder_w-80 dark:themebuilder_bg-gray-800 themebuilder_shadow-2xl ltr:themebuilder_translate-x-full rtl:themebuilder_translate-x-full;
+     font-family: "Vazirmatn", sans-serif;
+}
+
+/* Drawer Hidden State */
+.themebuilder_drawer.themebuilder_hidden {
+  @apply ltr:themebuilder_translate-x-full rtl:themebuilder_translate-x-full;
+}
+
+/* Drawer Shown State */
+.themebuilder_drawer.themebuilder_show {
+  @apply themebuilder_translate-x-0;
+}
+
+/* Drawer Header */
+.themebuilder_drawer-header {
+  @apply themebuilder_flex themebuilder_items-center themebuilder_justify-between themebuilder_mb-4 themebuilder_text-base themebuilder_font-semibold themebuilder_text-gray-500 dark:themebuilder_text-gray-400 themebuilder_relative;
+}
+
+/* Close Button */
+.themebuilder_drawer-close-button {
+  @apply themebuilder_text-gray-400 themebuilder_bg-transparent hover:themebuilder_bg-gray-200 hover:themebuilder_text-gray-900 themebuilder_rounded themebuilder_text-sm themebuilder_w-8 themebuilder_h-8 themebuilder_flex themebuilder_items-center themebuilder_justify-center dark:hover:themebuilder_bg-gray-600 dark:hover:themebuilder_text-white;
+}
+
+/* Close Button Icon */
+.themebuilder_drawer-close-icon {
+  @apply themebuilder_w-3 themebuilder_h-3;
+}
+
+/* Close Button Screen Reader Text */
+.themebuilder_drawer-close-screen-reader {
+  @apply themebuilder_sr-only;
+}
+
+/* Drawer Content */
+.themebuilder_drawer-content {
+  @apply themebuilder_flex-1 themebuilder_h-[calc(100%-100px)] themebuilder_text-sm themebuilder_text-gray-500 dark:themebuilder_text-gray-400 themebuilder_overflow-y-auto themebuilder_px-1;
+}
+
+/* Drawer Button Container */
+.themebuilder_drawer-buttons {
+  @apply themebuilder_grid themebuilder_grid-cols-2 themebuilder_gap-4;
+}
+
+/* Drawer Button */
+.themebuilder_drawer-button {
+  @apply themebuilder_px-4 themebuilder_py-2 themebuilder_text-sm themebuilder_font-medium themebuilder_text-center themebuilder_border themebuilder_rounded focus:themebuilder_outline-none;
+}
+
+/* Learn More Button */
+.themebuilder_drawer-learn-more {
+  @apply themebuilder_text-gray-900 themebuilder_bg-white themebuilder_border themebuilder_border-gray-200 hover:themebuilder_bg-gray-100 hover:themebuilder_text-blue-700 focus:themebuilder_ring-4 focus:themebuilder_ring-gray-100 dark:themebuilder_bg-gray-800 dark:themebuilder_text-gray-400 dark:themebuilder_border-gray-600 dark:hover:themebuilder_text-white dark:hover:themebuilder_bg-gray-700;
+}
+
+/* Get Access Button */
+.themebuilder_drawer-get-access {
+  @apply themebuilder_inline-flex themebuilder_items-center themebuilder_px-4 themebuilder_py-2 themebuilder_text-sm themebuilder_font-medium themebuilder_text-white themebuilder_bg-blue-700 themebuilder_rounded hover:themebuilder_bg-blue-800 focus:themebuilder_ring-4 focus:themebuilder_ring-blue-300 dark:themebuilder_bg-blue-600 dark:hover:themebuilder_bg-blue-700 focus:themebuilder_outline-none dark:focus:themebuilder_ring-blue-800;
+}
+
+/* Get Access Button Icon */
+.themebuilder_drawer-get-access-icon {
+  @apply rtl:themebuilder_rotate-180 themebuilder_w-3.5 themebuilder_h-3.5 themebuilder_ms-2;
+}
+
+/* Drawer Footer */
+.themebuilder_drawer-footer {
+  @apply themebuilder_fixed themebuilder_bottom-0 themebuilder_left-0 themebuilder_w-full themebuilder_flex themebuilder_h-[60px] themebuilder_items-center themebuilder_justify-between themebuilder_bg-gray-50 dark:themebuilder_bg-gray-800 themebuilder_border-t themebuilder_border-gray-200 dark:themebuilder_border-gray-700 themebuilder_p-4;
+}
+
+.themebuilder_animate-spin {
+  animation: themebuilder_spin 1s linear infinite;
+}
+
+@keyframes themebuilder_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.themebuilder_themebuilder {
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  width: max-content;
+  max-width: max-content;
+  height: max-content;
+  max-height: max-content;
+  padding: 3px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.themebuilder_themebuilder:hover {
+  @apply themebuilder_border-indigo-500;
+}
+
+.themebuilder_themebuilder::before {
+  content: "✎";
+  color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 3px;
+  font-size: 12px;
+  @apply themebuilder_bg-indigo-500 themebuilder_items-center themebuilder_justify-center themebuilder_hidden themebuilder_cursor-pointer;
+}
+
+.themebuilder_themebuilder:hover::before {
+  display: flex;
+}
+
+.themebuilder_themebuilder.themebuilder_active {
+  @apply themebuilder_border-indigo-500;
+}
+
+.themebuilder_themebuilder.themebuilder_active::before {
+  display: flex;
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type='checkbox'].themebuilder_switch {
+      --active: theme('colors.slate.700');
+      --active-inner: #fff;
+      --focus: 2px rgba(39, 94, 254, 0.3);
+      --border: #BBC1E1;
+      --border-hover: #275EFE;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 17px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+      width: 30px;
+      border-radius: 11px;
+    }
+  
+    input[type='checkbox'].themebuilder_switch:after {
+      content: '';
+      left: 2px;
+      top: 2px;
+      position: absolute;
+      border-radius: 50%;
+      width: 11px;
+      height: 11px;
+      background: var(--ab, var(--border));
+      transition: transform 0.3s ease, opacity 0.2s;
+      transform: translateX(var(--x, 0));
+    }
+  
+    input[type='checkbox'].themebuilder_switch:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --ab: var(--active-inner);
+      --x: 14px;
+    }
+  
+    input[type='checkbox'].themebuilder_switch:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+  
+    input[type='checkbox'].themebuilder_switch:disabled:checked {
+      --b: var(--disabled-inner);
+    }
+  
+    input[type='checkbox'].themebuilder_switch:disabled:after {
+      opacity: 0.6;
+    }
+  
+    input[type='checkbox'].themebuilder_switch:focus {
+      box-shadow: none;
+      border-width: 1px;
+      outline: none;
+    }
+  
+    input[type='checkbox'].themebuilder_switch + label {
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      @apply themebuilder_mr-2;
+    }
+  }
+  
+
+
+.themebuilder_offcanvas-toggle {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(0);
+    z-index: 1030;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    padding: 7px;
+    cursor: pointer;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    @apply themebuilder_bg-slate-700
+}
+
+.themebuilder_drawer-opened .themebuilder_offcanvas-toggle {
+    transform: translateY(-50%) translateX(-320px); /* Adjust this value to match your offcanvas width */
+}
+
+.themebuilder_widgets{
+  @apply themebuilder_w-full themebuilder_grid themebuilder_grid-cols-12 themebuilder_gap-4;
+}
+
+.themebuilder_widget{
+  @apply themebuilder_rounded-md themebuilder_gap-2 themebuilder_text-xs themebuilder_col-span-6 themebuilder_p-4 themebuilder_border-solid themebuilder_border-slate-300 themebuilder_border themebuilder_flex themebuilder_flex-col themebuilder_justify-center themebuilder_items-center;
+}
+
+[class^=eicon],
+[class*=" eicon-"]{
+  font-size: 40px !important;
+}

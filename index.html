@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+
+    <div class="themebuilder_themebuilder">
+        <button type="button" class="themebuilder_btn">دکمه</button>
+        <button type="button" class="themebuilder_btn-default">دکمه</button>
+        <button type="button" class="themebuilder_btn-success">دکمه</button>
+        <button type="button" class="themebuilder_btn-danger">دکمه</button>
+    </div>
+    <a href="https://google.com">کلیک روی لینک</a>
+    <button class="themebuilder_offcanvas-toggle" type="button" data-show-drawer="themebuilder-drawer" aria-controls="themebuilder-drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-menu-2">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+        </svg>
+    </button>
+
+    <!-- Drawer Component -->
+    <div id="themebuilder-drawer" class="themebuilder_drawer themebuilder_show" tabindex="-1" aria-labelledby="drawer-label">
+        <div class="themebuilder_drawer-header">
+            <h5 id="themebuilder_drawer-label">ویرایش اسلایدر</h5>
+            <button type="button" data-hide-drawer="themebuilder-drawer" aria-controls="themebuilder-drawer" class="themebuilder_drawer-close-button">
+                <svg class="themebuilder_drawer-close-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="themebuilder_drawer-close-screen-reader">بستن</span>
+            </button>
+        </div>
+
+        <!-- <div class="themebuilder_drawer-content">
+            <div class="themebuilder_tab-container">
+                <ul class="themebuilder_tab-list" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="themebuilder_tab-active" data-tabs-inactive-classes="themebuilder_tab-inactive" role="tablist">
+                    <li class="themebuilder_tab-item" role="presentation">
+                        <button class="themebuilder_tab-button" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">محتوا</button>
+                    </li>
+                    <li class="themebuilder_tab-item" role="presentation">
+                        <button class="themebuilder_tab-button" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">استایل</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="themebuilder_tab-contents">
+                <div class="themebuilder_tab-panel" id="styled-profile" role="tabpanel" aria-labelledby="profile-styled-tab">
+                    <div class="themebuilder_controller">
+                        <label for="first_name" class="themebuilder_labellabel">عنوان</label>
+                        <input type="text" id="first_name" class="themebuilder_input" placeholder="عنوان" required />
+                    </div>
+                    <div class="themebuilder_controller">
+                        <label for="content_text" class="themebuilder_labellabel">متن</label>
+                        <textarea id="content_text" class="themebuilder_textarea" placeholder="متن خود را وارد کنید"></textarea>
+                    </div>
+                    <div class="themebuilder_controller">
+                        <label for="product_type" class="themebuilder_label">انتخاب نوع محصول</label>
+                        <select id="product_type" class="themebuilder_select">
+                            <option selected>پیشنهاد ویژه</option>
+                            <option value="US">دسته بندی خاص</option>
+                            <option value="CA">جدید ترین</option>
+                            <option value="FR">قدیمی ترین</option>
+                            <option value="DE">بروزترین</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="themebuilder_tab-panel" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-styled-tab">
+                    <div class="themebuilder_controller flex items-center mb-4">
+                        <input id="default-radio-1" type="radio" name="default-radio" class="themebuilder_radio">
+                        <label for="default-radio-1" class="themebuilder_label-checkbox">رادیو</label>
+                    </div>
+                    <div class="themebuilder_controller">
+                        <input id="s2" type="checkbox" class="themebuilder_switch" checked>
+                        <label for="s2" class="themebuilder_label">سوییچ</label>
+                    </div>
+                    <div class="themebuilder_controller">
+                        <label for="background_color" class="themebuilder_label">پس‌زمینه</label>
+                        <input type="color" id="background_color" class="themebuilder_input-color">
+                    </div>
+                    <div class="themebuilder_controller">
+                        <div class="themebuilder_alert">هشدار پیشفرض</div>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="themebuilder_animate-spin" width="40px" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20.0001 12C20.0001 13.3811 19.6425 14.7386 18.9623 15.9405C18.282 17.1424 17.3022 18.1477 16.1182 18.8587C14.9341 19.5696 13.5862 19.9619 12.2056 19.9974C10.825 20.0328 9.45873 19.7103 8.23975 19.0612" stroke="#334155" stroke-width="2.55556" stroke-linecap="round"/>
+            </svg>
+        </div> -->
+
+        <div class="themebuilder_drawer-content">
+            <div class="themebuilder_widgets">
+                <button class="themebuilder_widget">
+                    <i class="eicon-container"></i>
+                    <span>کانتینر</span>
+                </button>
+                <button class="themebuilder_widget">
+                    <i class="eicon-slider-push"></i>
+                    <span>اسلایدر</span>
+                </button>
+                <button class="themebuilder_widget">
+                    <i class="eicon-product-related"></i>
+                    <span>باکس محصولات</span>
+                </button>
+                <button class="themebuilder_widget">
+                    <i class="eicon-text"></i>
+                    <span>متن</span>
+                </button>
+                <button class="themebuilder_widget">
+                    <i class="eicon-t-letter"></i>
+                    <span>عنوان</span>
+                </button>
+                <button class="themebuilder_widget">
+                    <i class="eicon-google-maps"></i>
+                    <span>نقشه گوگل</span>
+                </button>
+            </div>
+        </div>
+        <div class="themebuilder_drawer-footer">
+            <button class="themebuilder_btn-success">ذخیره</button>
+            <button class="themebuilder_btn-danger">خروج</button>
+        </div>
+    </div>
+
+    
+
+    <script src="assets/app.js"></script>
+
+</body>
+</html>
